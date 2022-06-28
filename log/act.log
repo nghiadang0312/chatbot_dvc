@@ -1,0 +1,25 @@
+2022-06-06 01:47:48 INFO     rasa_sdk.endpoint  - Starting action endpoint server...
+2022-06-06 01:47:50 INFO     rasa_sdk.executor  - Registered function for 'action_tra_cuu_hs'.
+2022-06-06 01:47:50 INFO     rasa_sdk.executor  - Registered function for 'action_ss_started'.
+2022-06-06 01:47:50 INFO     rasa_sdk.executor  - Registered function for 'action_thong_ke_full'.
+2022-06-06 01:47:50 INFO     rasa_sdk.executor  - Registered function for 'action_tra_cuu_diachi'.
+2022-06-06 01:47:50 INFO     rasa_sdk.executor  - Registered function for 'action_greet'.
+2022-06-06 01:47:50 INFO     rasa_sdk.executor  - Registered function for 'action_get_started'.
+2022-06-06 01:47:50 INFO     rasa_sdk.executor  - Registered function for 'action_setslot'.
+2022-06-06 01:47:50 INFO     rasa_sdk.executor  - Registered function for 'action_rsslot'.
+2022-06-06 01:47:50 INFO     rasa_sdk.executor  - Registered function for 'action_show_thutuc'.
+2022-06-06 01:47:50 INFO     rasa_sdk.executor  - Registered function for 'action_thu_tuc'.
+2022-06-06 01:47:50 INFO     rasa_sdk.executor  - Registered function for 'action_tra_cuu_hs_tccn'.
+2022-06-06 01:47:50 INFO     rasa_sdk.executor  - Registered function for 'action_show_hoso'.
+2022-06-06 01:47:50 INFO     rasa_sdk.executor  - Registered function for 'thongke_form'.
+2022-06-06 01:47:50 INFO     rasa_sdk.executor  - Registered function for 'diachi_form'.
+2022-06-06 01:47:50 INFO     rasa_sdk.executor  - Registered function for 'mahs_form'.
+2022-06-06 01:47:50 INFO     rasa_sdk.executor  - Registered function for 'thutuc_form'.
+2022-06-06 01:47:50 INFO     rasa_sdk.executor  - Registered function for 'tccn_form'.
+2022-06-06 01:47:50 INFO     rasa_sdk.endpoint  - Action endpoint is up and running on http://localhost:5055
+/home/dhnghia/chatbot/venv/lib/python3.7/site-packages/rasa_sdk/executor.py:78: FutureWarning: Use of `utter_button_message` is deprecated. Use `utter_message(text=<text> , buttons=<list of buttons>)` instead.
+  FutureWarning,
+2022-06-07 08:35:54 ERROR    rasa_sdk.endpoint  - Failed to extract slot tc_cn with action tccn_form
+2022-06-07 08:36:13 ERROR    rasa_sdk.endpoint  - Failed to extract slot tc_cn with action tccn_form
+2022-06-07 08:36:18 ERROR    rasa_sdk.endpoint  - Failed to extract slot tc_cn with action tccn_form
+2022-06-14 09:46:47 ERROR    rasa_sdk.endpoint  - Failed to extract slot tc_cn with action tccn_form

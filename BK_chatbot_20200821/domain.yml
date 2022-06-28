@@ -1,0 +1,185 @@
+session_config:
+  session_expiration_time: 30
+  carry_over_slots_to_new_session: false
+intents:
+- tra_cuu_hs
+- thong_ke
+- tra_cuu_diachi
+- inform
+- chi_co_dv
+- greet
+- bye
+- chuc_nang
+- get_started
+- hoi_dc
+- hoi_sdt
+- hoi_fax
+- hoi_email
+- full_tt
+- k_y_nghia
+- cam_on
+- xin_loi
+- thu_tuc
+- ten_thu_tuc
+- show_thutuc
+- tra_cuu_hs_tccn
+entities:
+- ma_hs
+- thang_tk
+- nam_tk
+- don_vi
+- hoi_tt
+- tu_khoa
+- key_tt
+- tc_cn
+- ngay_tk
+slots:
+  don_vi:
+    type: unfeaturized
+  hoi_tt:
+    type: unfeaturized
+  key_tt:
+    type: unfeaturized
+  linh_vuc:
+    type: unfeaturized
+  ma_hs:
+    type: unfeaturized
+  nam_tk:
+    type: unfeaturized
+  ngay_tk:
+    type: unfeaturized
+  requested_slot:
+    type: unfeaturized
+  tc_cn:
+    type: unfeaturized
+  thang_tk:
+    type: unfeaturized
+  tu_khoa:
+    type: unfeaturized
+responses:
+  utter_loi:
+  - text: Không thể kết nối với server! Mong quý khách thông cảm!
+  - text: Lỗi kết nối server!
+  - text: Server đang bảo trì!
+  - text: Đã xảy ra lỗi ngoài ý muốn.
+  utter_ask_don_vi:
+  - text: Bạn cần đơn vị nào?
+  utter_ask_tc_cn:
+  - text: Bạn cần tra cứu hồ sơ của tổ chức cá nhân nào?
+  utter_chi_co_dv:
+  - buttons:
+    - payload: /thu_tuc
+      title: Tra cứu thủ tục
+    - payload: /thong_ke
+      title: Thống kê số lượng hồ sơ
+    - payload: /tra_cuu_diachi
+      title: Tìm thông tin đơn vị
+    text: Bạn cần thông tin gì ở {don_vi}?
+  utter_ask_nam_tk:
+  - text: Bạn cần thông tin vào tháng {thang_tk} của năm nào?
+  utter_ask_thang_tk:
+  - text: Bạn cần thông tin vào tháng mấy (đừng quên nhập kèm chữ "tháng")?
+  utter_ask_ngay_tk:
+  - text: Bạn cần tra cứu thông tin hồ sơ của {tc_cn} vào ngày nào (vui lòng nhập
+      kèm chữ "ngày")?
+  utter_ask_tu_khoa:
+  - text: Bạn cần tìm thủ tục gì (Vui lòng kèm chữ thủ tục ở đầu câu)?
+  utter_ask_hoi_tt:
+  - buttons:
+    - payload: /hoi_dc
+      title: Địa chỉ đơn vị
+    - payload: /hoi_sdt
+      title: Số điện thoại liên lạc
+    - payload: /hoi_fax
+      title: Số fax
+    - payload: /hoi_email
+      title: Thư điện tử (email)
+    - payload: /full_tt
+      title: Tất cả thông tin
+    text: Bạn cần thông tin gì
+  utter_saidv:
+  - text: Vui lòng kiểm tra lại đơn vị bạn vừa nhập!
+  utter_saingay:
+  - text: Vui lòng kiểm tra lại ngày bạn vừa nhập!
+  utter_saithang:
+  - text: Vui lòng kiểm tra lại tháng bạn vừa nhập!
+  utter_sainam:
+  - text: Vui lòng kiểm tra lại năm bạn vừa nhập!
+  utter_fallback:
+  - text: Xin lỗi! tôi chưa hiểu yêu cầu của bạn.
+  utter_get_started:
+  - buttons:
+    - payload: /chuc_nang
+      title: Có!
+    text: Bạn có cần giúp đỡ gì không?
+  utter_chuc_nang:
+  - buttons:
+    - payload: /thu_tuc
+      title: Tra cứu thủ tục.
+    - payload: /tra_cuu_hs_tccn
+      title: Tra cứu hồ sơ.
+    - payload: /thong_ke
+      title: Thống kê số lượng hồ sơ.
+    - payload: /tra_cuu_diachi
+      title: Tìm thông tin đơn vị.
+    text: 'Tôi có thể giúp bạn thực hiện các việc sau đây:'
+  utter_bye:
+  - text: Cảm ơn bạn đã sử dụng dịch vụ! Tạm biệt bạn.
+  - text: Hẹn gặp lại!
+  - text: Tạm biệt bạn!
+  utter_restart:
+  - buttons:
+    - payload: /chuc_nang
+      title: Có!
+    - payload: /bye
+      title: Không!
+    text: Bạn cần thêm thông tin nữa không ạ!
+  utter_cam_on:
+  - text: Không có chi!
+  - text: Tôi rất vui khi giúp được bạn!
+  - text: Chuyện của tôi nên làm thôi mà!
+  utter_xin_loi:
+  - text: Xin hãy cho tôi thời gian để thay đổi!
+  - text: Tôi sẽ cố gắng trở nên hoàn thiện hơn!
+  - text: Thành thật xin lỗi!
+  - text: Mong bạn thông cảm vì sai lầm này!
+  - text: Tôi cần thời gian để hoàn thiện mình!
+actions:
+- utter_chi_co_dv
+- action_tra_cuu_hs
+- action_thong_ke_full
+- action_tra_cuu_diachi
+- action_greet
+- action_ss_started
+- utter_fallback
+- utter_loi
+- utter_ask_don_vi
+- utter_ask_thang_tk
+- utter_ask_nam_tk
+- utter_saidv
+- utter_saithang
+- utter_sainam
+- utter_restart
+- utter_bye
+- utter_chuc_nang
+- utter_get_started
+- action_get_started
+- utter_ask_hoi_tt
+- action_setslot
+- action_rsslot
+- utter_cam_on
+- utter_xin_loi
+- action_thu_tuc
+- utter_ask_tu_khoa
+- action_show_thutuc
+- action_tra_cuu_hs_tccn
+- action_show_hoso
+- utter_ask_tc_cn
+- utter_ask_ngay_tk
+- utter_saingay
+- mahs_form
+forms:
+- thongke_form
+- diachi_form
+- thutuc_form
+- tccn_form

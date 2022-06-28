@@ -1,0 +1,4 @@
+action_endpoint:
+    url: http://localhost:5055/webhook
+  # if using a custom queue, change the queue name to the one that you use
+
